@@ -4,6 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear Python Cache
+        run: |
+          sudo rm -rf /opt/hostedtoolcache/Python/3.10.0
       - uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
